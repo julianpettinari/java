@@ -1,6 +1,7 @@
 package com.company;
 
 import java.util.Date;
+import java.util.Scanner;
 
 public class Main {
 
@@ -18,8 +19,7 @@ public class Main {
 
     cantidad=nombre.length();
     nombre= nombre.toUpperCase();
-    if (nombre.equals("JUAN"))
-    {
+    if (nombre.equals("JUAN")){
         System.out.println(nombre);
         System.out.println("Cómo estás chupa birra?");
         System.out.println("Cantidad de caracteres:");
@@ -118,12 +118,53 @@ public class Main {
                 System.out.println("el número 2 es mayor al número 1");
             }
         }
+                    /////// SCANNER //////
 
+        Scanner lector;
+        lector = new Scanner(System.in);
+
+        int num1;
+        int num2;
+        float coeficiente2;
+        String nombre2;
+        char inicialNombre;
+    //Int
+        System.out.println("Ingrese el primer número:");
+        num1=lector.nextInt();
+        System.out.println("Ingrese el segundo número:");
+        num2=lector.nextInt();
+        //String
+        System.out.println("Ingrese su nombre:");
+        nombre2 = lector.next(); //No me deja usar nextLine, me salta al siguiente input.
+    //Float
+    System.out.println("Ingrese el coeficiente:");
+    coeficiente2 = lector.nextFloat();
+
+    //inicialNombre = nombre2.charAt(0);
+
+
+    String nombreAlumno;
+    String apellidoAlumno;
+    String iniciales;
+
+    System.out.println("Ingrese nombre del alumno:");
+    nombreAlumno = lector.next();
+    System.out.println("Ingrese apellido del alumno:");
+    apellidoAlumno=lector.next();
+    System.out.println("El alumno se llama: " + nombreAlumno + " " + apellidoAlumno);
+    iniciales = nombreAlumno.charAt(0) + " " + apellidoAlumno.charAt(0);
+    System.out.println("Iniciales:" + iniciales);
     }
 
+    //FUNCIONES
 
-
-
+    boolean esDivisible (int num1, int num2){
+        if(num1%num2 == 0){
+            return true;
+        } else{
+            return false;
+        }
+    }
 
 
 
